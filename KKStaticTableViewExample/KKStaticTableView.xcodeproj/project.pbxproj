@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7187C39419B75D2C0090A51F /* KKStaticTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7187C39319B75D2C0090A51F /* KKStaticTableView.m */; };
 		71FBC1A819B75B8000FB8129 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1A719B75B8000FB8129 /* main.m */; };
 		71FBC1AB19B75B8000FB8129 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1AA19B75B8000FB8129 /* AppDelegate.m */; };
 		71FBC1AE19B75B8000FB8129 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1AD19B75B8000FB8129 /* ViewController.m */; };
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7187C39219B75D2C0090A51F /* KKStaticTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKStaticTableView.h; sourceTree = "<group>"; };
+		7187C39319B75D2C0090A51F /* KKStaticTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKStaticTableView.m; sourceTree = "<group>"; };
 		71FBC1A219B75B8000FB8129 /* KKStaticTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKStaticTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FBC1A619B75B8000FB8129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71FBC1A719B75B8000FB8129 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7187C39519B75D300090A51F /* KKStaticTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7187C39219B75D2C0090A51F /* KKStaticTableView.h */,
+				7187C39319B75D2C0090A51F /* KKStaticTableView.m */,
+			);
+			name = KKStaticTableView;
+			sourceTree = "<group>";
+		};
 		71FBC19919B75B8000FB8129 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +91,7 @@
 		71FBC1A419B75B8000FB8129 /* KKStaticTableView */ = {
 			isa = PBXGroup;
 			children = (
+				7187C39519B75D300090A51F /* KKStaticTableView */,
 				71FBC1A919B75B8000FB8129 /* AppDelegate.h */,
 				71FBC1AA19B75B8000FB8129 /* AppDelegate.m */,
 				71FBC1AC19B75B8000FB8129 /* ViewController.h */,
@@ -218,6 +231,7 @@
 				71FBC1AE19B75B8000FB8129 /* ViewController.m in Sources */,
 				71FBC1AB19B75B8000FB8129 /* AppDelegate.m in Sources */,
 				71FBC1A819B75B8000FB8129 /* main.m in Sources */,
+				7187C39419B75D2C0090A51F /* KKStaticTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +418,7 @@
 				71FBC1C419B75B8000FB8129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71FBC1C519B75B8000FB8129 /* Build configuration list for PBXNativeTarget "KKStaticTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +427,7 @@
 				71FBC1C719B75B8000FB8129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
