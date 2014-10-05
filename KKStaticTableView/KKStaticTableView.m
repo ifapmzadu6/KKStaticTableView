@@ -55,7 +55,7 @@
     return newSection;
 }
 
-- (KKStaticTableViewRowItem *)addCellAtSection:(NSString *)sectionTitle cellTitle:(NSString *)cellTitle didSelect:(void (^)())didSelectCellAction {
+- (KKStaticTableViewRowItem *)addCellAtSection:(NSString *)sectionTitle cellTitle:(NSString *)cellTitle didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction {
     for (KKStaticTableViewSectionItem *section in _sections) {
         if ([section.title isEqualToString:sectionTitle]) {
             KKStaticTableViewRowItem *newStaticCell = [[KKStaticTableViewRowItem alloc] init];
@@ -74,7 +74,7 @@
                              staticCellType:(KKStaticTableViewCellType)cellType
                                        cell:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))customCell
                                  cellHeight:(CGFloat)cellHeight
-                                     didSelect:(void (^)())didSelectCellAction {
+                                     didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction {
     for (KKStaticTableViewSectionItem *section in _sections) {
         if ([section.title isEqualToString:sectionTitle]) {
             KKStaticTableViewRowItem *newStaticCell = [[KKStaticTableViewRowItem alloc] init];
@@ -94,7 +94,7 @@
                             customCellClass:(id)customCellClass
                                        cell:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))customCell
                                  cellHeight:(CGFloat)cellHeight
-                                     didSelect:(void (^)())didSelectCellAction {
+                                     didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction {
     for (KKStaticTableViewSectionItem *section in _sections) {
         if ([section.title isEqualToString:sectionTitle]) {
             KKStaticTableViewRowItem *newStaticCell = [[KKStaticTableViewRowItem alloc] init];
@@ -245,7 +245,7 @@
     KKStaticTableViewRowItem *cell = staticSection.cells[indexPath.row];
     
     if (cell.didSelectCellAction) {
-        cell.didSelectCellAction();
+        cell.didSelectCellAction(tableView, indexPath);
     }
     
     [self deselectRowAtIndexPath:indexPath animated:YES];

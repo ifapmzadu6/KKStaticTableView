@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 IRIE JUNYA. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 typedef enum _KKStaticTableViewCellType {
     KKStaticTableViewCellTypeDefault,
@@ -34,19 +34,19 @@ typedef enum _KKStaticTableViewCellType {
 
 - (KKStaticTableViewRowItem *)addCellAtSection:(NSString *)sectionTitle
                                   cellTitle:(NSString *)cellTitle
-                                  didSelect:(void (^)())didSelectCellAction;
+                                  didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction;
 
 - (KKStaticTableViewRowItem *)addCellAtSection:(NSString *)sectionTitle
                              staticCellType:(KKStaticTableViewCellType)cellType
                                        cell:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))customCell
                                  cellHeight:(CGFloat)cellHeight
-                                     didSelect:(void (^)())didSelectCellAction;
+                                     didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction;
 
 - (KKStaticTableViewRowItem *)addCellAtSection:(NSString *)sectionTitle
                             customCellClass:(id)customCellClass
                                        cell:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))customCell
                                  cellHeight:(CGFloat)cellHeight
-                                     didSelect:(void (^)())didSelectCellAction;
+                                     didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction;
 
 - (void)reloadSection:(KKStaticTableViewSectionItem *)staticSection;
 - (void)reloadSectionWithTitle:(NSString *)sectionTitle;
