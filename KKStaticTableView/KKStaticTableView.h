@@ -19,61 +19,62 @@ typedef enum _KKStaticTableViewCellType {
 
 @interface KKStaticTableView : UITableView <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic, readonly) NSMutableArray *sections;
+@property (strong, nonatomic, readonly) NSMutableArray * _Nonnull sections;
 
-@property (strong, nonatomic) UIColor *cellTextColor;
-@property (strong, nonatomic) UIFont *cellTextFont;
-@property (strong, nonatomic) UIColor *cellDetailTextColor;
-@property (strong, nonatomic) UIFont *cellDetailTextFontTypeSubTitle;
-@property (strong, nonatomic) UIFont *cellDetailTextFontTypeValue1;
+@property (strong, nonatomic) UIColor * _Nonnull cellTextColor;
+@property (strong, nonatomic) UIFont * _Nonnull cellTextFont;
+@property (strong, nonatomic) UIColor * _Nonnull cellDetailTextColor;
+@property (strong, nonatomic) UIFont * _Nonnull cellDetailTextFontTypeSubTitle;
+@property (strong, nonatomic) UIFont * _Nonnull cellDetailTextFontTypeValue1;
 
-- (KKStaticTableViewSectionItem *)addSectionWithTitle:(NSString *)sectionTitle;
+- (KKStaticTableViewSectionItem * _Nonnull)addSectionWithTitle:(NSString * _Nonnull)sectionTitle;
 
-- (KKStaticTableViewSectionItem *)addSectionWithTitle:(NSString *)sectionTitle description:(NSString *)description;
+- (KKStaticTableViewSectionItem * _Nonnull)addSectionWithTitle:(NSString * _Nonnull)sectionTitle description:(NSString * _Nonnull)description;
 
 
-- (KKStaticTableViewRowItem *)addCellAtSection:(NSString *)sectionTitle
-                                  cellTitle:(NSString *)cellTitle
-                                  didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction;
+- (KKStaticTableViewRowItem * _Nonnull)addCellAtSection:(NSString * _Nonnull)sectionTitle
+                                              cellTitle:(NSString * _Nonnull)cellTitle
+                                              didSelect:(void (^ _Nullable)(KKStaticTableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath))didSelectCellAction;
 
-- (KKStaticTableViewRowItem *)addCellAtSection:(NSString *)sectionTitle
-                             staticCellType:(KKStaticTableViewCellType)cellType
-                                       cell:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))customCell
-                                 cellHeight:(CGFloat)cellHeight
-                                     didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction;
+- (KKStaticTableViewRowItem * _Nonnull)addCellAtSection:(NSString * _Nonnull)sectionTitle
+                                         staticCellType:(KKStaticTableViewCellType)cellType
+                                                   cell:(void (^ _Nullable)(UITableViewCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath))customCell
+                                             cellHeight:(CGFloat)cellHeight
+                                              didSelect:(void (^_Nullable)(KKStaticTableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath))didSelectCellAction;
 
-- (KKStaticTableViewRowItem *)addCellAtSection:(NSString *)sectionTitle
-                            customCellClass:(id)customCellClass
-                                       cell:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))customCell
-                                 cellHeight:(CGFloat)cellHeight
-                                     didSelect:(void (^)(KKStaticTableView *tableView, NSIndexPath* indexPath))didSelectCellAction;
+- (KKStaticTableViewRowItem * _Nonnull)addCellAtSection:(NSString * _Nonnull)sectionTitle
+                                        customCellClass:(id _Nonnull)customCellClass
+                                                   cell:(void (^ _Nullable)(UITableViewCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath))customCell
+                                             cellHeight:(CGFloat)cellHeight
+                                              didSelect:(void (^ _Nullable)(KKStaticTableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath))didSelectCellAction;
 
-- (void)reloadSection:(KKStaticTableViewSectionItem *)staticSection;
-- (void)reloadSectionWithTitle:(NSString *)sectionTitle;
-- (void)reloadCell:(KKStaticTableViewRowItem *)staticCell;
+- (void)reloadSection:(KKStaticTableViewSectionItem * _Nonnull)staticSection;
+- (void)reloadSectionWithTitle:(NSString * _Nonnull)sectionTitle;
+- (void)reloadCell:(KKStaticTableViewRowItem * _Nonnull)staticCell;
 
-- (void)removeSection:(KKStaticTableViewSectionItem *)staticSection;
-- (void)removeCell:(KKStaticTableViewRowItem *)staticCell;
+- (void)removeSection:(KKStaticTableViewSectionItem * _Nonnull)staticSection;
+- (void)removeCell:(KKStaticTableViewRowItem * _Nonnull)staticCell;
 
 @end
 
 
 @interface KKStaticTableViewSectionItem : NSObject
 
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *detail;
-@property (strong, nonatomic) NSMutableArray *cells;
+@property (strong, nonatomic) NSString * _Nonnull title;
+@property (strong, nonatomic) NSString * _Nonnull detail;
+@property (strong, nonatomic) NSMutableArray * _Nonnull cells;
 
 @end
+
 
 @interface KKStaticTableViewRowItem : NSObject
 
 @property (nonatomic) KKStaticTableViewCellType type;
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *subTitle;
-@property (copy, nonatomic) void (^customCell)(UITableViewCell *cell, NSIndexPath *indexPath);
+@property (strong, nonatomic) NSString * _Nonnull title;
+@property (strong, nonatomic) NSString * _Nonnull subTitle;
+@property (copy, nonatomic) void (^ _Nullable customCell)(UITableViewCell * _Nonnull cell, NSIndexPath * _Nonnull indexPath);
 @property (nonatomic) CGFloat customCellHeight;
-@property (copy, nonatomic) void (^didSelectCellAction)();
-@property (strong, nonatomic) id customCellClass;
+@property (copy, nonatomic) void (^ _Nullable didSelectCellAction)();
+@property (strong, nonatomic) id _Nonnull customCellClass;
 
 @end
