@@ -8,7 +8,7 @@
 
 #import "KKStaticTableView.h"
 
-@interface KKStaticTableView ()
+@interface KKStaticTableView () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 

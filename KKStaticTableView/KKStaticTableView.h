@@ -17,7 +17,7 @@ typedef enum _KKStaticTableViewCellType {
 
 @class KKStaticTableViewSectionItem, KKStaticTableViewRowItem;
 
-@interface KKStaticTableView : UITableView <UITableViewDataSource, UITableViewDelegate>
+@interface KKStaticTableView : UITableView
 
 @property (strong, nonatomic, readonly) NSMutableArray * _Nonnull sections;
 
@@ -29,7 +29,7 @@ typedef enum _KKStaticTableViewCellType {
 
 - (KKStaticTableViewSectionItem * _Nonnull)addSectionWithTitle:(NSString * _Nonnull)sectionTitle;
 
-- (KKStaticTableViewSectionItem * _Nonnull)addSectionWithTitle:(NSString * _Nonnull)sectionTitle description:(NSString * _Nonnull)description;
+- (KKStaticTableViewSectionItem * _Nonnull)addSectionWithTitle:(NSString * _Nonnull)sectionTitle description:(NSString * _Nullable)description;
 
 
 - (KKStaticTableViewRowItem * _Nonnull)addCellAtSection:(NSString * _Nonnull)sectionTitle
