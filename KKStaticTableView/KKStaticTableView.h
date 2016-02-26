@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum _KKStaticTableViewCellType {
+typedef NS_ENUM(NSInteger, KKStaticTableViewCellType) {
     KKStaticTableViewCellTypeDefault,
     KKStaticTableViewCellTypeSubTitle,
     KKStaticTableViewCellTypeValue1,
     KKStaticTableViewCellTypeCustom
-} KKStaticTableViewCellType;
+};
 
 @class KKStaticTableViewSectionItem, KKStaticTableViewRowItem;
 

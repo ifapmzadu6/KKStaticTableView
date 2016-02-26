@@ -181,7 +181,7 @@
     
     NSString *identifier = NSStringFromClass(staticCell.customCellClass);
     if (staticCell.type != KKStaticTableViewCellTypeCustom) {
-        identifier = [NSStringFromClass([UITableViewCell class]) stringByAppendingFormat:@"%d", staticCell.type];
+        identifier = [NSStringFromClass([UITableViewCell class]) stringByAppendingFormat:@"%ld", (long)staticCell.type];
     }
     UITableViewCell *cell = [self dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
